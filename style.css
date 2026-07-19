@@ -52,7 +52,7 @@ input{
     font-weight:14px;
 }
 
-button{
+.add-button{
     border:none;
     outline:none;
     padding: 16px 50px;
@@ -64,7 +64,7 @@ button{
     transition:transform 0.3s ease;
 }
 
-button:hover{
+.add-button:hover{
     transform:scale(1.05);
     border: 5px solid white ;
 }
@@ -75,6 +75,8 @@ ul li{
     cursor: pointer;
     position:relative;
     padding: 12px 8px 12px 50px ;
+    display:flex;
+   align-items: center;
 }
 
 ul li::before{
@@ -83,17 +85,16 @@ ul li::before{
     height:18px;
     width:18px;
     left:8px;
-    top:10px;
     border:2px solid #555;
     border-radius:50%;
 }
 
-ul li.checked{
+li.checked .taskText{
     text-decoration: line-through;
     color:#888;
 }
 
-ul li.checked::before{
+li.checked::before{
     content:"\2713";
     color:#fff;
     background-color:#ff5945;
@@ -103,9 +104,9 @@ ul li.checked::before{
 }
 
 ul li .close{
-    position:absolute;
+   /* position:absolute;
     right:0;
-    top:0;
+    top:0; */
     padding:12px 16px 12px 16px;
     color:#ed0808;
     cursor:pointer;
@@ -124,3 +125,29 @@ ul li .close{
     flex-direction: row;
     cursor: pointer;
 }
+
+
+.edit{
+    
+    border:none;
+    cursor:pointer;
+    padding:5px;
+    font-size: 16px;
+    background-color:#ff5945;
+    color:white;
+    margin-left: auto;
+    margin-right: 10px;
+
+}
+
+.edit:hover{
+    color:#ff5945;
+    background-color:transparent;
+}
+
+.taskText{
+    flex:1;
+    margin-right: 10px;
+}
+
+
